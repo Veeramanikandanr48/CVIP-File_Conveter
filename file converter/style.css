@@ -1,0 +1,171 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #171717;
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	height: 10vh;
+}
+
+nav button {
+	padding: 10px 20px;
+	font-size: 0.9rem;
+	font-weight: 600;
+	margin: 0 20px;
+	outline: 0;
+	border: 0;
+	background-color: transparent;
+	border: #DA0037 solid 1px;
+	color: #ffffff;
+	position: relative;
+	cursor: pointer;
+}
+
+nav button::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #DA0037;
+	height: 100%;
+	width: 0;
+	z-index: -1;
+	transition: width 0.5s;
+}
+
+nav button:hover:after {
+	width: 100%;
+}
+
+nav button:hover i {
+	color: #fff;
+}
+
+nav button:active {
+	box-shadow: 0 0 5px 2px #585858;
+}
+
+nav i {
+	transition: color 1s;
+	color: #DA0037;
+	padding: 0 5px;
+}
+
+main {
+	width: 100%;
+	min-height: 90vh;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.fa-file-pdf {
+	color: #d34646;
+}
+
+.fa-file-alt {
+	color: rgb(61, 107, 206);
+}
+
+.convert {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+}
+
+.convert .arrow {
+	transition: transform 1s;
+	padding: 0 20px;
+	font-size: 1.7rem;
+}
+
+.opposite {
+	transform: rotate(180deg);
+}
+
+.drop_area {
+	width: 40%;
+	max-width: 500px;
+	height: 300px;
+	background-color: #eee;
+	color: #444444;
+	border: #DA0037 dashed 3px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.drop_area div {
+	margin: 10px;
+}
+
+.drop_area div:last-child {
+	margin-bottom: 50px;
+}
+
+.drop_area button {
+	padding: 10px 20px;
+	font-size: 0.9rem;
+	outline: none;
+	border: #171717 solid 1px;
+	background-color: transparent;
+	color: #171717;
+	cursor: pointer;
+}
+
+.drop_area button:hover {
+	background-color: #171717;
+	color: #fff;
+	border: none;
+}
+
+.Download {
+	margin-top: 2rem;
+}
+
+.Download button {
+	padding: 10px 20px;
+	font-size: 1rem;
+	background-color: #fa6666;
+	border: none;
+	cursor: pointer;
+}
+
+.Download i {
+	padding-left: 10px;
+	color: #1b1b1b;
+	font-size: 1.2rem;
+}
+
+.Download button:hover i {
+	color: #000000;
+}
+
+.Download button:active {
+	box-shadow: 1px 1px 5px #DA0037;
+}
+
+#fileName {
+	margin-top: 1rem;
+	color: #3996bb;
+	font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 768px) {
+	main .drop_area {
+		width: 90%;
+	}
+}
